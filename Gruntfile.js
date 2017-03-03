@@ -233,7 +233,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-docular");
 
   grunt.registerTask("compile", ["clean", "concat", "uglify"]);
-  grunt.registerTask("build", ["test", "compile", "compress"]);
+  // grunt.registerTask("build", ["test", "compile", "compress"]);
+  grunt.registerTask("build", ["test", "compile"]);
   grunt.registerTask("test", ["jshint", "qunit"]);
   grunt.registerTask("docs", ["docular", "clean:docs"]);
   grunt.registerTask("default", "test");
