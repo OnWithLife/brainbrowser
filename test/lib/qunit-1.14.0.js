@@ -1396,7 +1396,7 @@ Test.prototype = {
 				( collapsed ? removeClass : addClass )( next, "qunit-collapsed" );
 			});
 
-			addEvent(b, "dblclick", function( e ) {
+			addEvent(b, "shiftKey", function( e ) {
 				var target = e && e.target ? e.target : window.event.srcElement;
 				if ( target.nodeName.toLowerCase() === "span" || target.nodeName.toLowerCase() === "b" ) {
 					target = target.parentNode;

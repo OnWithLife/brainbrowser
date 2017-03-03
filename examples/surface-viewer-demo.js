@@ -51,7 +51,7 @@ $(function() {
     return;
   }
 
-  $.get("models/atlas-labels.txt", function(data) {
+  $.get("models/atlas-labels.dat", function(data) {
     var lines = data.split("\n");
     var regex = /'(.+)'\s+(\d+)/;
 
@@ -323,7 +323,7 @@ $(function() {
       var values = Array.prototype.slice.call(intensity_data.values);
 
       link.attr("href", BrainBrowser.utils.createDataURL(values.join("\n")));
-      $("#intensity-data-export-link").attr("download", "intensity-values.txt");
+      $("#intensity-data-export-link").attr("download", "intensity-values.dat");
       $("#intensity-data-export").show();
     });
 
