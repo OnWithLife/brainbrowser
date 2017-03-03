@@ -760,7 +760,7 @@ $(function() {
             complete: function() {
               $("#vertex-data-wrapper").show();
               $("#pick-value-wrapper").show();
-              viewer.loadIntensityDataFromURL("models/cortical-thickness.txt", {
+              viewer.loadIntensityDataFromURL("models/cortical-thickness.dat", {
                 name: "Cortical Thickness",
                 complete: hideLoading,
                 cancel: defaultCancelOptions(current_request)
@@ -777,7 +777,7 @@ $(function() {
             complete: function() {
               $("#vertex-data-wrapper").show();
               $("#pick-value-wrapper").show();
-              viewer.loadIntensityDataFromURL("models/cortical-thickness.txt", {
+              viewer.loadIntensityDataFromURL("models/cortical-thickness.dat", {
                 name: "Cortical Thickness",
                 complete: hideLoading,
                 cancel: defaultCancelOptions(current_request),
