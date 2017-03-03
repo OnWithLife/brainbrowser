@@ -217,6 +217,10 @@ $(function() {
           }
         });
 
+        // viewer.setTransparency(0.5, {
+        //   shape_name: "shape_1"
+        // });
+
         slider.slider("values", 0, parseFloat(range_min));
         slider.slider("values", 1, parseFloat(range_max));
         min_input.val(range_min);
