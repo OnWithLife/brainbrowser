@@ -726,7 +726,7 @@ $(function() {
               $("#vertex-data-wrapper").show();
               $("#pick-value-wrapper").show();
               $("#pick-label-wrapper").show();
-              viewer.loadIntensityDataFromURL("models/atlas-values.txt", {
+              viewer.loadIntensityDataFromURL("models/atlas-values.dat", {
                 complete: hideLoading
               });
             },
@@ -783,7 +783,7 @@ $(function() {
                 cancel: defaultCancelOptions(current_request),
                 blend: true
               });
-              viewer.loadIntensityDataFromURL("models/atlas-values.txt", {
+              viewer.loadIntensityDataFromURL("models/atlas-values.dat", {
                 complete: hideLoading,
                 cancel: defaultCancelOptions(current_request),
                 blend: true
@@ -995,4 +995,3 @@ $(function() {
 
   });
 });
-
