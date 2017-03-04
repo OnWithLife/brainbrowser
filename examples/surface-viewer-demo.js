@@ -728,7 +728,7 @@ $(function() {
       var examples = {
         atlas: function() {
           viewer.annotations.setMarkerRadius(1);
-          viewer.loadModelFromURL("models/brain-surface.obj", {
+          viewer.loadModelFromURL("models/brain-surface.obj.gz", {
             format: "mniobj",
             complete: function() {
               $("#vertex-data-wrapper").show();

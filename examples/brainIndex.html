@@ -92,7 +92,6 @@
                $('div#' + name).html($(response).find('div.copy').html());
            });
          }
-
     </script>
 <body>
 
@@ -112,7 +111,7 @@
         <a role="button" class="btn btn-default" onclick="showContent2d('#pons', 'img/static_brain_images/Pons.png');">Pons</a>
         <a role="button" class="btn btn-default" onclick="showContent3d('#brocas-area', 11, 11);">Broca's Area</a>
         <a role="button" class="btn btn-default" onclick="showContent3d('#wernickes-area', 81, 81);">Wernicke's Area</a>
-        <a role="button" class="btn btn-default" onclick="showContent2d('#hypothalamus', 'img/static_brain_images/hypothalamus.png');">Hypothalamus</a>
+        <a role="button" class="btn btn-default" onclick="showContent2d('#hypothalamus', 'img/static_brain_images/Hypothalamus.png');">Hypothalamus</a>
         <a role="button" class="btn btn-default" onclick="showContent2d('#thalamus', 'img/static_brain_images/Thalamus.png');">Thalamus</a>
         <a role="button" class="btn btn-default" onclick="showContent2d('#pituitary-gland', 'img/static_brain_images/Pituitary-Gland.png');">Pituitary Gland</a>
         <a role="button" class="btn btn-default" onclick="showContent3d('#precentral-gyrus', 1, 2);">Pre-central Gyrus</a>
@@ -123,6 +122,46 @@
 <div class="col-md-9">
     <div id="brain-container" class="model-container">
       <div id="display">
+        <!--
+        <a id="control-button" class="button">Hide Controls</a>
+        <div id="vertex-data-wrapper">
+          <div id="vertex-data">
+            <h3>Select a point on the surface<BR>(shift-click)</h3>
+            <div>X: <span id="pick-x" class="pick-data"></span></div>
+            <div>Y: <span id="pick-y" class="pick-data"></span></div>
+            <div>Z: <span id="pick-z" class="pick-data"></span></div>
+            <input id="centric_rotation" type="checkbox"><label for="centric_rotation">Defined selected point as center of rotation<br /></label>
+            <div>Vertex number: <span id="pick-index" class="pick-data"></span></div>
+            <div id="pick-value-wrapper" style="display:none">
+              Value: <input id="pick-value" class="pick-data" size="5">
+              <span id="pick-color" class="pick-data"></span>
+              <div id="intensity-data-export" style="display:none">
+                <a id="intensity-data-export-link" target="_blank">Export new intensity values</a>
+              </div>
+            </div>
+            <div id="pick-label-wrapper" style="display:none">Region: <span id="pick-label" class="pick-data"></span></div>
+            <div id="annotation-wrapper" style="display:none">
+              <h4>
+                Add an annotation for this vertex!
+              </h4>
+              <div>
+                Image URL: <input type="text" id="annotation-image">
+              </div>
+              <div>
+                Link URL: <input type="text" id="annotation-url">
+              </div>
+              <div>
+                Text: <div><textarea id="annotation-text"></textarea></div>
+              </div>
+              <input type="submit" id="annotation-save" value="Save">
+            </div>
+            <div id="annotation-display" style="display:none">
+              <h3 id="annotation-header">Your Annotations</h3>
+              <div id="annotation-media"></div>
+            </div>
+          </div>
+        </div>
+        -->
         <!-- Loading image from: http://www.ajaxload.info/ -->
         <div id="loading" style="display: none"><img src="img/ajax-loader.gif" /></div>
         <div id="brainbrowser"></div>
