@@ -6,11 +6,14 @@
     <link type="text/css" href="css/ui-darkness/jquery-ui-1.8.10.custom.css" rel="Stylesheet" />
     <link type="text/css" href="css/common.css" rel="Stylesheet" />
     <link type="text/css" href="css/surface-viewer-demo.css" rel="Stylesheet" />
+
+    
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link type="text/css" href="css/main-styles.css" rel="stylesheet" />
     <script src="js/jquery-1.6.4.min.js"></script>
     <script src="js/jquery-ui-1.8.10.custom.min.js"></script>
     <script src="js/ui.js"></script>
@@ -33,6 +36,8 @@
     <script src="surface-viewer-demo.config.js"></script>
     <script src="js/AnaglyphEffect.js"></script>
     <script src="surface-viewer-demo.js"></script>
+ 
+     
     <style media="screen">
       .sections-btns a {
         width: 100%;
@@ -99,30 +104,53 @@
     </script>
 <body>
 
-<div class="col-md-4">
-    <div class="sections-btns">
-        <a role="button" class="btn btn-default" onclick="showContent3d('#frontal-lobe', 1, 38);">Frontal Lobe</a>
-        <a role="button" class="btn btn-default" onclick="showContent3d('#pre-frontal-cortex', 41, 54);">Pre-frontal Cortex</a>
-        <a role="button" class="btn btn-default" onclick="showContent3d('#parietal-lobe', 57, 68);">Parietal Lobe</a>
-        <a role="button" class="btn btn-default" onclick="showContent2d('#cerebellum', 'img/static_brain_images/Cerebellum.png');">Cerebellum</a>
-        <a role="button" class="btn btn-default" onclick="showContent3d('#occipital-lobe', 41, 54);">Occipital Lobe</a>
-        <a role="button" class="btn btn-default" onclick="showContent3d('#temporal-lobe', 71, 90);">Temporal Lobe</a>
-        <a role="button" class="btn btn-default" onclick="showContent2d('#hippocampus', 'img/static_brain_images/Hippocampus.png');">Hippocampus</a>
-        <a role="button" class="btn btn-default" onclick="showContent2d('#amygdala', 'img/static_brain_images/Amygdala.png');">Amygdala</a>
-        <a role="button" class="btn btn-default" onclick="showContent2d('#basal-ganglia', 'img/static_brain_images/Basal-Ganglia.png');">Basal Ganglia</a>
-        <a role="button" class="btn btn-default" onclick="showContent2d('#brainstem', 'img/static_brain_images/Brainstem.png');">Brainstem</a>
-        <a role="button" class="btn btn-default" onclick="showContent2d('#medulla', 'img/static_brain_images/Medulla.png');">Medulla</a>
-        <a role="button" class="btn btn-default" onclick="showContent2d('#pons', 'img/static_brain_images/Pons.png');">Pons</a>
-        <a role="button" class="btn btn-default" onclick="showContent3d('#brocas-area', 11, 11);">Broca's Area</a>
-        <a role="button" class="btn btn-default" onclick="showContent3d('#wernickes-area', 81, 81);">Wernicke's Area</a>
-        <a role="button" class="btn btn-default" onclick="showContent2d('#hypothalamus', 'img/static_brain_images/hypothalamus.png');">Hypothalamus</a>
-        <a role="button" class="btn btn-default" onclick="showContent2d('#thalamus', 'img/static_brain_images/Thalamus.png');">Thalamus</a>
-        <a role="button" class="btn btn-default" onclick="showContent2d('#pituitary-gland', 'img/static_brain_images/Pituitary-Gland.png');">Pituitary Gland</a>
-        <a role="button" class="btn btn-default" onclick="showContent3d('#pre-central-gyrus', 1, 2);">Pre-central Gyrus</a>
-        <a role="button" class="btn btn-default" onclick="showContent3d('#post-central-gyrus', 57, 58);">Post-central Gyrus</a>
-    </div>
-    
-   <div class="brain"><h1>The Brain</h1></div>
+  
+<div class="container col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" id="navbar-text">Virtual Brain</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="sub-navbar-text">Brain Sections<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+        <li><a role="button" class="btn btn-default" onclick="showContent2d('#amygdala', 'img/static_brain_images/Amygdala.png');" id="mobile-menu8">Amygdala</a></li>                 
+        <li><a role="button" class="btn btn-default" onclick="showContent2d('#basal-ganglia', 'img/static_brain_images/Basal-Ganglia.png');" id="mobile-menu9">Basal Ganglia</a></li>
+        <li><a role="button" class="btn btn-default" onclick="showContent2d('#brainstem', 'img/static_brain_images/Brainstem.png');" id="mobile-menu11">Brainstem</a></li>
+        <li><a role="button" class="btn btn-default" onclick="showContent3d('#brocas-area', 11, 11);" id="mobile-menu14">Broca's Area</a></li>
+        <li><a role="button" class="btn btn-default" onclick="showContent2d('#cerebellum', 'img/static_brain_images/Cerebellum.png');" id="mobile-menu4">Cerebellum</a></li>        
+        <li><a role="button" class="btn btn-default" onclick="showContent3d('#frontal-lobe', 1, 38);" id="mobile-menu1" >Frontal Lobe</a></li>
+		  <li><a role="button" class="btn btn-default" onclick="showContent2d('#hippocampus', 'img/static_brain_images/Hippocampus.png');" id="mobile-menu7">Hippocampus</a></li>
+		  <li><a role="button" class="btn btn-default" onclick="showContent2d('#hypothalamus', 'img/static_brain_images/hypothalamus.png');" id="mobile-menu16">Hypothalamus</a></li>
+        <li><a role="button" class="btn btn-default" onclick="showContent2d('#medulla', 'img/static_brain_images/Medulla.png');" id="mobile-menu12">Medulla</a></li>        
+        <li><a role="button" class="btn btn-default" onclick="showContent3d('#occipital-lobe', 41, 54);" id="mobile-menu5">Occipital Lobe</a></li>
+        <li><a role="button" class="btn btn-default" onclick="showContent3d('#parietal-lobe', 57, 68);" id="mobile-menu3">Parietal Lobe</a></li>
+		  <li><a role="button" class="btn btn-default" onclick="showContent2d('#pituitary-gland', 'img/static_brain_images/Pituitary-Gland.png');" id="mobile-menu18">Pituitary Gland</a></li>
+		  <li><a role="button" class="btn btn-default" onclick="showContent2d('#pons', 'img/static_brain_images/Pons.png');" id="mobile-menu13">Pons</a></li>        
+        <li><a role="button" class="btn btn-default" onclick="showContent3d('#post-central-gyrus', 57, 58);" id="mobile-menu10">Post-central Gyrus</a></li>             
+        <li><a role="button" class="btn btn-default" onclick="showContent3d('#pre-central-gyrus', 1, 2);" id="mobile-menu19">Pre-central Gyrus</a></li>
+        <li><a role="button" class="btn btn-default" onclick="showContent3d('#pre-frontal-cortex', 41, 54);" id="mobile-menu2">Pre-frontal Cortex</a></li>
+        <li><a role="button" class="btn btn-default" onclick="showContent3d('#temporal-lobe', 71, 90);" id="mobile-menu6">Temporal Lobe</a></li>
+        <li><a role="button" class="btn btn-default" onclick="showContent2d('#thalamus', 'img/static_brain_images/Thalamus.png');" id="mobile-menu17">Thalamus</a></li>     
+        <li><a role="button" class="btn btn-default" onclick="showContent3d('#wernickes-area', 81, 81);" id="mobile-menu15">Wernicke's Area</a></li>
+        
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+<div class="brain-data">
+
 
    <div id="frontal-lobe" class="brain-section frontal-lobe">
    </div>
@@ -165,7 +193,9 @@
    
 </div>
 
-<div class="col-md-8">
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
     <div id="brain-container" class="model-container">
       <div id="display">
         <!-- Loading image from: http://www.ajaxload.info/ -->
@@ -313,9 +343,8 @@
     <div id="static-image-container" class="container-fluid model-container">
       <img id="static-image" class="static-image img-responsive" />
   </div>
+ </div>
 
-
-</div>
 
 </body>
 </html>

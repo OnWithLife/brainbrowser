@@ -1,0 +1,125 @@
+body {
+    margin-top: 25px;
+}
+.sections-btns a {
+    width: 100%;
+}
+/*.brain-section {
+/    display: none;
+}
+*/
+.brain {
+    width: 100%;
+    text-align: center;
+    height: 500px;
+}
+.btn-default{
+    border-radius: 0;
+    background-color: #539ebc;
+    border: solid white 1px;
+    height: 50px;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    line-height: 2.2em;
+    text-align: left;
+}
+.btn-default:hover {
+    background-color: white;
+    border: none;
+}
+.btn-header {
+    width: 80%;
+    background-color: #539ebc;
+    color: white;
+    font-size: 1.5em;
+    line-height: 2em;
+    height: 60px;
+}
+.navbar-default {
+    background-color: #539ebc;
+}
+
+.btn-header:hover,
+#navbar-text,
+#sub-navbar-text,
+#mobile-menu1,
+#mobile-menu2,
+#mobile-menu3,
+#mobile-menu4,
+#mobile-menu5,
+#mobile-menu6,
+#mobile-menu7,
+#mobile-menu8,
+#mobile-menu9,
+#mobile-menu10,
+#mobile-menu11,
+#mobile-menu12,
+#mobile-menu13,
+#mobile-menu14,
+#mobile-menu15,
+#mobile-menu16,
+#mobile-menu17,
+#mobile-menu18,
+#mobile-menu19 {
+    color: white;
+}
+#sub-navbar-text:hover,
+#sub-navbar-text:active,
+#sub-navbar-text:focus {
+    background-color: #ccc;
+}
+
+#sub-navbar-text:hover,
+#sub-navbar-text:active,
+#sub-navbar-text:focus,
+#mobile-menu1:hover,
+#mobile-menu2:hover,
+#mobile-menu3:hover,
+#mobile-menu4:hover,
+#mobile-menu5:hover,
+#mobile-menu6:hover,
+#mobile-menu7:hover,
+#mobile-menu8:hover,
+#mobile-menu9:hover,
+#mobile-menu10:hover,
+#mobile-menu11:hover,
+#mobile-menu12:hover,
+#mobile-menu13:hover,
+#mobile-menu14:hover,
+#mobile-menu15:hover,
+#mobile-menu16:hover,
+#mobile-menu17:hover,
+#mobile-menu18:hover,
+#mobile-menu19:hover {
+    color: black;
+}
+
+h1,
+h2 {
+    color: rgb(30, 72, 141);
+}
+h1 {
+    padding-bottom: 15px;
+    border-bottom: solid 3px rgb(225, 225, 225);
+}
+p {
+    line-height: 1.8em;
+}
+.brain-img {
+    width: 100%;
+}
+/*
+@media screen and (max-width: 768px) {
+    .brain,
+    .brain-section{
+        width: 90%;
+        margin: auto;
+    }
+    .brain {
+        height: 300px;
+    }
+    .brain-section h1,
+    .brain {
+        margin-top: 50px;
+    }
+}*/
