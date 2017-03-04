@@ -81,10 +81,13 @@
             $("#brain-container").hide();
             $("#static-image-container").show();
         };
-
-        $(".brain-section").each(function() {
+		
+		$( document ).ready(function() {
+		 $(".brain-section").each(function() {
           getDivInfo($(this).attr('id'));
         });
+		});			
+       
 
         function getDivInfo(name){
            var url = 'http://www.onwithlife.org/' + name + '.aspx';
