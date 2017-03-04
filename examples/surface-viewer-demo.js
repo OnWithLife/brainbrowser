@@ -1012,7 +1012,7 @@ $(function() {
       }).appendTo(div);
     }
 
-    viewer.loadColorMapFromURL("/color-maps/solid/owl-blue.txt");
+    viewer.loadColorMapFromURL("./color-maps/solid/owl-blue.txt");
 
     $("#autoRotateZ").click(function () {
       viewer.setClearColor(0x888888);
