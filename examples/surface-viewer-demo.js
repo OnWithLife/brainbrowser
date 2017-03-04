@@ -31,6 +31,9 @@
 $(function() {
   "use strict";
 
+  var currentMin = 0.9;
+  var currentMax = 2.1;
+
   var THREE = BrainBrowser.SurfaceViewer.THREE;
   var atlas_labels = {};
 
@@ -43,7 +46,6 @@ $(function() {
   var loading_div = $("#loading");
   function showLoading() { loading_div.show(); }
   function hideLoading() { loading_div.hide(); }
-
 
   // Make sure WebGL is available.
   if (!BrainBrowser.WEBGL_ENABLED) {
@@ -83,6 +85,7 @@ $(function() {
 
     // When a new model is added to the viewer, create a transparancy slider
     // for each shape that makes up the model.
+    /*
     viewer.addEventListener("displaymodel", function(event) {
       var slider, slider_div;
       var children = event.model.children;
@@ -116,6 +119,7 @@ $(function() {
         });
       }
     });
+    */
 
     // When the screen is cleared, remove all UI related
     // to the displayed models.
@@ -733,6 +737,17 @@ $(function() {
               viewer.loadIntensityDataFromURL("models/atlas-values.dat", {
                 complete: hideLoading
               });
+
+              //////////////////////////////////
+              // MODEL LOADED - SET DEFAULT VIEW
+              //////////////////////////////////
+
+              viewer.setClearColor(0x888888);
+              viewer.setView("anterior");
+              viewer.autorotate.z = true;
+              viewer.color_map.clamp = false;
+              viewer.setIntensityRange(0, 0);
+              viewer.setTransparency(0.5);
             },
             cancel: defaultCancelOptions(current_request),
             parse: { split: true }
@@ -897,7 +912,7 @@ $(function() {
             cancel: defaultCancelOptions(current_request)
           });
 
-          viewer.zoom = 1.8;
+          viewer.zoom = 2.2;
 
           matrixRotX = new THREE.Matrix4();
           matrixRotX.makeRotationX(-0.5 * Math.PI);
@@ -996,6 +1011,48 @@ $(function() {
         }
       }).appendTo(div);
     }
+
+    viewer.loadColorMapFromURL("/color-maps/solid/owl-blue.txt");
+
+    $("#autoRotateZ").click(function () {
+      viewer.setClearColor(0x888888);
+      viewer.setView("anterior");
+      viewer.autorotate.z = true;
+    });
+
+    $("#selectFrontalLobe").click(function () {
+        viewer.color_map.clamp = false;
+        viewer.setIntensityRange(0.9, 38.1);
+        viewer.setTransparency(0.5);
+    });
+
+    $("#selectOccipitalLobe").click(function () {
+        viewer.color_map.clamp = false;
+        viewer.setIntensityRange(39.9, 54.1);
+        viewer.setTransparency(0.5);
+    });
+
+    $("#up").click(function () {
+        currentMin += 2;
+        currentMax += 2;
+
+        $("#currentMinLabel").text(currentMin + 0.1);
+
+        viewer.color_map.clamp = false;
+        viewer.setIntensityRange(currentMin, currentMax);
+        viewer.setTransparency(0.5);
+    });
+
+    $("#down").click(function () {
+        currentMin -= 2;
+        currentMax -= 2;
+
+        $("#currentMinLabel").text(currentMin + 0.1);
+
+        viewer.color_map.clamp = false;
+        viewer.setIntensityRange(currentMin, currentMax);
+        viewer.setTransparency(0.5);
+    });
 
   });
 });

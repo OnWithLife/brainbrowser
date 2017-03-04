@@ -36,7 +36,18 @@
   </head>
   <body>
 
+    <div id="dsmhack_controls" style="height: 30px;">
+      {dsmHack} &nbsp;&nbsp;
+      <button id="autoRotateZ">Auto-Rotate Z Axis</button>
+      <button id="selectFrontalLobe">Frontal Lobe</button>
+      <button id="selectOccipitalLobe">Occipital Lobe</button>
+      <button id="down">-</button>
+      <button id="up">+</button>
+      <label id="currentMinLabel" />
+    </div>
+
     <div id="display">
+      <!--
       <a id="control-button" class="button">Hide Controls</a>
       <div id="vertex-data-wrapper">
         <div id="vertex-data">
@@ -75,6 +86,7 @@
           </div>
         </div>
       </div>
+      -->
       <!-- Loading image from: http://www.ajaxload.info/ -->
       <div id="loading" style="display: none"><img src="img/ajax-loader.gif" /></div>
       <div id="brainbrowser"></div>
@@ -82,27 +94,26 @@
 <!-- Right Controls Box
 ======================================= -->
 
-      <div id="controls">
-        <div id="controls-content">
-          <div id="examples" class="box full_box">
+      <div id="controls" style="display:none;">
+        <div id="controls-content" style="display:none;">
+          <div id="examples" class="box full_box" style="display:none;">
             <h5>(Scroll to view addtional controls.)</h5>
             <h3>Sample Models</h3>
             <ul>
               <li><a href="#" class="example" data-example-name="atlas">Brain Atlas</a> (81924 vertices)</li>
               <li><a href="#" class="example" data-example-name="cortical_thickness">Brain with Cortical Thickness Map</a> (81924 vertices)</li>
-              <!-- <li><a href="#" class="example" data-example-name="blend">Blend</a> (81924 vertices)</li>
+              <li><a href="#" class="example" data-example-name="blend">Blend</a> (81924 vertices)</li>
               <li><a href="#" class="example" data-example-name="dti">DTI and Mesh Brain</a> (560674 vertices)</li>
               <li><a href="#" class="example" data-example-name="dbs">JSON Deep Brain Stimulation</a> (47050 vertices)</li>
               <li><a href="#" class="example" data-example-name="freesurferbin">Freesurfer binary Left Hemisphere</a> (163842 vertices)</li>
-              <li><a href="#" class="example" data-example-name="freesurferasc">Freesurfer ASC Left Hemisphere</a> (137720 vertices)</li> -->
-              <!-- <li><a href="#" class="example" data-example-name="car">Wavefront OBJ Automobile</a> (29795 vertices)</li> -->
+              <li><a href="#" class="example" data-example-name="freesurferasc">Freesurfer ASC Left Hemisphere</a> (137720 vertices)</li>
             </ul>
           </div>
-          <!-- <div id="paint-controls" class="box full_box">
+          <div id="paint-controls" class="box full_box">
             Paint value (ctrl-click to paint): <input id="paint-value" size="5">
             <span id="paint-color"></span>
-          </div> -->
-          <!-- <div id="surface_choice" class="box full_box">
+          </div>
+          <div id="surface_choice" class="box full_box">
             <h4>Load your own data!</h4>
             <p>
               (Note: your data will remain on your computer and will not be transferred to the BrainBrowser server.)
@@ -142,7 +153,7 @@
                 Color Map: <input type="file" name="color-map" id="color-map"><br />
               </div>
               <span id="clearshapes" class="button">Clear Shapes</span>
-          </div> -->
+          </div>
           <div id="color-map-box" class="box full_box">
             Color Map:
           </div>
@@ -216,7 +227,6 @@
           </div>
         </div>
       </div> <!-- end of controls box -->
-
     </div>
 
     <!-- all the scripts -->
@@ -242,5 +252,6 @@
     <script src="surface-viewer-demo.config.js"></script>
     <script src="js/AnaglyphEffect.js"></script>
     <script src="surface-viewer-demo.js"></script>
+    <!--<script src="onwithlife.js"></script>-->
   </body>
 </html>

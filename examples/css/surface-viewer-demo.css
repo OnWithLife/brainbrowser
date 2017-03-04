@@ -2,7 +2,7 @@
 * BrainBrowser: Web-based Neurological Visualization Tools
 * (https://brainbrowser.cbrain.mcgill.ca)
 *
-* Copyright (C) 2011 
+* Copyright (C) 2011
 * The Royal Institution for the Advancement of Learning
 * McGill University
 *
@@ -167,7 +167,7 @@ select#clear_color {
 }
 html {
   height: 100%;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 div.file-select {
@@ -286,4 +286,3 @@ div#format_hints {
   margin-top: 1em;
   padding: 0.5em;
 }
-
